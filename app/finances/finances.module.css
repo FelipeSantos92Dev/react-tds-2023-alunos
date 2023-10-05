@@ -1,0 +1,407 @@
+/* Container */
+.container {
+  display: flex;
+  background-color: #f1f5f9; /* Cor de fundo mais clara */
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem; /* Aumentei o padding para um visual mais espaçado */
+  border-bottom: 2px solid #d4d9de; /* Usei uma cor de borda mais clara */
+}
+
+/* Perfil */
+.profile {
+  color: #333; /* Cor do texto mais escura para maior legibilidade */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%; /* Largura automática para ajustar ao conteúdo */
+}
+
+.welcome {
+  color: #333; /* Cor do texto mais escura */
+  font-size: 1rem;
+}
+
+.useremail {
+  color: #888; /* Cor do e-mail mais clara para menor destaque */
+  font-size: 0.75rem;
+}
+
+/* Conteúdo Principal */
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1.5rem; /* Espaçamento maior para o conteúdo */
+  height: calc(
+    100vh - 5rem
+  ); /* Ajustei a altura de acordo com o novo espaçamento */
+  background-color: #fff; /* Cor de fundo mais clara para maior contraste */
+  border-radius: 5px; /* Borda arredondada para um visual mais suave */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionei uma sombra sutil */
+}
+
+.title {
+  color: #333; /* Cor do título mais escura */
+  font-size: 1.5rem;
+  width: 50%;
+}
+
+.mainheader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem; /* Espaçamento maior abaixo das transações */
+}
+
+.transaction {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  align-items: center;
+}
+
+.description {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  color: #333; /* Cor do texto mais escura */
+  font-size: 1rem;
+}
+
+.type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.inputdescription {
+  width: 100%;
+  height: 2.5rem;
+  border: 1px solid #d4d9de; /* Cor da borda mais clara */
+  border-radius: 5px;
+  padding: 0.5rem; /* Espaçamento menor dentro do input */
+}
+
+.buttonreceita {
+  background-color: #9fe0b1; /* Cor de fundo mais clara */
+  color: #333; /* Cor do texto mais escura */
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem; /* Espaçamento menor dentro do botão */
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buttondespesa {
+  background-color: #e09f9f; /* Cor de fundo mais clara */
+  color: #333; /* Cor do texto mais escura */
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem; /* Espaçamento menor dentro do botão */
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buttonAtualizar {
+  background-color: #f1f1f1; /* Cor de fundo mais clara */
+  color: #333; /* Cor do texto mais escura */
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem; /* Espaçamento menor dentro do botão */
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buttonAtualizar:hover {
+  background-color: #c9c9c9; /* Cor de fundo mais clara */
+}
+
+/* Informações do Dashboard */
+.infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem; /* Espaçamento maior abaixo das informações */
+}
+
+/* Cards do Dashboard */
+.cardSaldo {
+  width: 30%; /* Largura ligeiramente menor para espaço entre os cards */
+  height: 150px;
+  margin: 0.5rem; /* Espaçamento menor entre os cards */
+  border-radius: 5px;
+  padding: 1rem; /* Espaçamento maior dentro dos cards */
+  background-color: #9fc7e0; /* Cor de fundo mais clara */
+  color: #333; /* Cor do texto mais escura */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionei uma sombra sutil */
+}
+/* Cards do Dashboard */
+.cardReceitas {
+  width: 30%; /* Largura ligeiramente menor para espaço entre os cards */
+  height: 150px;
+  margin: 0.5rem; /* Espaçamento menor entre os cards */
+  border-radius: 5px;
+  padding: 1rem; /* Espaçamento maior dentro dos cards */
+  background-color: #9fe0b1; /* Cor de fundo mais clara */
+  color: #333; /* Cor do texto mais escura */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionei uma sombra sutil */
+}
+/* Cards do Dashboard */
+.cardDespesas {
+  width: 30%; /* Largura ligeiramente menor para espaço entre os cards */
+  height: 150px;
+  margin: 0.5rem; /* Espaçamento menor entre os cards */
+  border-radius: 5px;
+  padding: 1rem; /* Espaçamento maior dentro dos cards */
+  background-color: #e09f9f; /* Cor de fundo mais clara */
+  color: #333; /* Cor do texto mais escura */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionei uma sombra sutil */
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem; /* Espaçamento menor abaixo do título */
+}
+
+.cardValue {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.registros {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 60%;
+  margin: 0 auto;
+  height: 100%;
+  overflow-y: auto; /* Adicionei scroll para o conteúdo */
+}
+
+.registrosreceitas {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto; /* Adicionei scroll para o conteúdo */
+  background-color: #d0f0c0;
+  border-radius: 5px;
+  padding-bottom: 1rem;
+}
+
+.registrosreceitastitle {
+  margin: 1rem 0;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.registrosreceitaslist {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.registrosreceitasitem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color: #9fe0b1;
+}
+
+.registrosreceitasitemvalue {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.registrosdespesas {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto; /* Adicionei scroll para o conteúdo */
+  background-color: #f0c0c0;
+  border-radius: 5px;
+  padding-bottom: 1rem;
+}
+
+.registrosdespesastitle {
+  margin: 1rem 0;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.registrosdespesaslist {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.registrosdespesasitem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color: #e09f9f;
+}
+
+.registrosdespesasitemvalue {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.actionsbutton {
+  background-color: #f1f1f1; /* Cor de fundo mais clara */
+  color: #333; /* Cor do texto mais escura */
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem; /* Espaçamento menor dentro do botão */
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.actionsbutton:hover {
+  background-color: #c9c9c9; /* Cor de fundo mais clara */
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+  /* Container */
+  .container {
+    flex-direction: column;
+    padding: 1rem; /* Reduzido o espaçamento vertical */
+    text-align: center;
+  }
+
+  /* Perfil */
+  .profile {
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .welcome,
+  .useremail {
+    text-align: center;
+  }
+
+  /* Conteúdo Principal */
+  .content {
+    padding: 1rem; /* Reduzido o espaçamento interno */
+    height: auto; /* Altura automática para ajustar o conteúdo */
+  }
+
+  .title {
+    width: 100%; /* Largura total para dispositivos móveis */
+  }
+
+  .mainheader,
+  .infos {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .transaction {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .description,
+  .type {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .inputdescription {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .buttonreceita,
+  .buttondespesa {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  /* Cards do Dashboard */
+  .cardSaldo,
+  .cardReceitas,
+  .cardDespesas {
+    width: 100%; /* Largura total para dispositivos móveis */
+  }
+
+  /* Registros */
+  .registros {
+    flex-direction: column; /* Alterado para empilhar registros na vertical */
+    width: 100%; /* Largura total para dispositivos móveis */
+  }
+
+  /* Registros de Receitas */
+  .registrosreceitas {
+    background-color: #d0f0c0; /* Cor de fundo ajustada */
+  }
+
+  /* Registros de Despesas */
+  .registrosdespesas {
+    background-color: #f0c0c0; /* Cor de fundo ajustada */
+  }
+
+  /* Ajustes comuns para Registros de Receitas e Despesas */
+  .registrosreceitastitle,
+  .registrosdespesastitle {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  .registrosreceitaslist,
+  .registrosdespesaslist {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .registrosreceitasitem,
+  .registrosdespesasitem {
+    flex-direction: column; /* Empilhar itens na vertical */
+    width: 100%;
+    padding: 1rem; /* Aumentado o espaçamento interno */
+  }
+
+  .registrosreceitasitemvalue,
+  .registrosdespesasitemvalue {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 0.5rem; /* Espaçamento superior entre valor e descrição */
+  }
+}
