@@ -6,6 +6,7 @@ import ListaTransacao from '@/models/ListaTransacao'
 
 import { FaPen, FaTrash } from 'react-icons/fa'
 import DashCard from '../components/dashcard/DashCard'
+import DashButton from '../components/dashbutton/DashButton'
 
 const listaTransacao = new ListaTransacao()
 
@@ -101,11 +102,11 @@ function Finances() {
             <div className={styles.type}>
               {
                 editButton ? (
-                  <button className={styles.buttonAtualizar} onClick={update} >Atualizar</button>
+                  <DashButton text={"Editar"} fn={update} color={"#9fc7e0"} />
                 ) : (
                   <>
-                    <button className={styles.buttonreceita} onClick={addReceita} >Receita</button>
-                    <button className={styles.buttondespesa} onClick={addDespesa} >Despesa</button>
+                    <DashButton text={"Receita"} fn={addReceita} color={"#9fe0b1"} />
+                    <DashButton text={"Despesa"} fn={addDespesa} color={"#e09f9f"} />
                   </>
                 )
               }
@@ -114,14 +115,8 @@ function Finances() {
         </div>
         <div className={styles.infos}>
           <DashCard titulo={'Saldo'} valor={saldo} cor={"#9fc7e0"} />
-          <div className={styles.cardReceitas}>
-            <p className={styles.cardTitle}>Receitas</p>
-            <p className={styles.cardValue}>R$ {receitas}</p>
-          </div>
-          <div className={styles.cardDespesas}>
-            <p className={styles.cardTitle}>Despesas</p>
-            <p className={styles.cardValue}>R$ {despesas}</p>
-          </div>
+          <DashCard titulo={'Receitas'} valor={receitas} cor={"#9fe0b1"} />
+          <DashCard titulo={'Despesas'} valor={despesas} cor={"#e09f9f"} />
         </div>
 
         <div className={styles.registros}>

@@ -6,8 +6,8 @@ const DashButton = ({ text, fn, color }) => {
       className={estilos.btn}
       style={{ backgroundColor: color }}
       onClick={fn}>
-        {text}
-      </button>
+      {text}
+    </button>
   )
 }
 

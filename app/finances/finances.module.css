@@ -128,41 +128,6 @@
   align-items: center;
   margin-bottom: 1.5rem; /* Espaçamento maior abaixo das informações */
 }
-
-/* Cards do Dashboard */
-.cardSaldo {
-  width: 30%; /* Largura ligeiramente menor para espaço entre os cards */
-  height: 150px;
-  margin: 0.5rem; /* Espaçamento menor entre os cards */
-  border-radius: 5px;
-  padding: 1rem; /* Espaçamento maior dentro dos cards */
-  background-color: #9fc7e0; /* Cor de fundo mais clara */
-  color: #333; /* Cor do texto mais escura */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionei uma sombra sutil */
-}
-/* Cards do Dashboard */
-.cardReceitas {
-  width: 30%; /* Largura ligeiramente menor para espaço entre os cards */
-  height: 150px;
-  margin: 0.5rem; /* Espaçamento menor entre os cards */
-  border-radius: 5px;
-  padding: 1rem; /* Espaçamento maior dentro dos cards */
-  background-color: #9fe0b1; /* Cor de fundo mais clara */
-  color: #333; /* Cor do texto mais escura */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionei uma sombra sutil */
-}
-/* Cards do Dashboard */
-.cardDespesas {
-  width: 30%; /* Largura ligeiramente menor para espaço entre os cards */
-  height: 150px;
-  margin: 0.5rem; /* Espaçamento menor entre os cards */
-  border-radius: 5px;
-  padding: 1rem; /* Espaçamento maior dentro dos cards */
-  background-color: #e09f9f; /* Cor de fundo mais clara */
-  color: #333; /* Cor do texto mais escura */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionei uma sombra sutil */
-}
-
 .cardTitle {
   font-size: 1.25rem;
   margin-bottom: 0.5rem; /* Espaçamento menor abaixo do título */
