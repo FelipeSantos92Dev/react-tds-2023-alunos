@@ -84,43 +84,6 @@
   padding: 0.5rem; /* Espaçamento menor dentro do input */
 }
 
-.buttonreceita {
-  background-color: #9fe0b1; /* Cor de fundo mais clara */
-  color: #333; /* Cor do texto mais escura */
-  border: none;
-  border-radius: 5px;
-  padding: 0.5rem 1rem; /* Espaçamento menor dentro do botão */
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.buttondespesa {
-  background-color: #e09f9f; /* Cor de fundo mais clara */
-  color: #333; /* Cor do texto mais escura */
-  border: none;
-  border-radius: 5px;
-  padding: 0.5rem 1rem; /* Espaçamento menor dentro do botão */
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.buttonAtualizar {
-  background-color: #f1f1f1; /* Cor de fundo mais clara */
-  color: #333; /* Cor do texto mais escura */
-  border: none;
-  border-radius: 5px;
-  padding: 0.5rem 1rem; /* Espaçamento menor dentro do botão */
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.buttonAtualizar:hover {
-  background-color: #c9c9c9; /* Cor de fundo mais clara */
-}
-
 /* Informações do Dashboard */
 .infos {
   display: flex;
@@ -175,23 +138,6 @@
   padding: 0 1rem;
 }
 
-.registrosreceitasitem {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  width: 100%;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  background-color: #9fe0b1;
-}
-
-.registrosreceitasitemvalue {
-  font-size: 1.25rem;
-  font-weight: bold;
-}
-
 .registrosdespesas {
   display: flex;
   flex-direction: column;
@@ -216,46 +162,6 @@
   gap: 1rem;
   width: 100%;
   padding: 0 1rem;
-}
-
-.registrosdespesasitem {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  width: 100%;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  background-color: #e09f9f;
-}
-
-.registrosdespesasitemvalue {
-  font-size: 1.25rem;
-  font-weight: bold;
-}
-
-.actions {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-}
-
-.actionsbutton {
-  background-color: #f1f1f1; /* Cor de fundo mais clara */
-  color: #333; /* Cor do texto mais escura */
-  border: none;
-  border-radius: 5px;
-  padding: 0.5rem 1rem; /* Espaçamento menor dentro do botão */
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.actionsbutton:hover {
-  background-color: #c9c9c9; /* Cor de fundo mais clara */
 }
 
 /* Estilos para dispositivos móveis */

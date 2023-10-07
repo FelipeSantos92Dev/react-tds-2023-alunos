@@ -1,0 +1,38 @@
+.registrositem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.registrositemvalue {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.actionsbutton {
+  background-color: #f1f1f1; /* Cor de fundo mais clara */
+  color: #333; /* Cor do texto mais escura */
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem; /* Espaçamento menor dentro do botão */
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.actionsbutton:hover {
+  background-color: #c9c9c9; /* Cor de fundo mais clara */
+}

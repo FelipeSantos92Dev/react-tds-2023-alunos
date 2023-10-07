@@ -4,9 +4,9 @@ import styles from './finances.module.css'
 
 import ListaTransacao from '@/models/ListaTransacao'
 
-import { FaPen, FaTrash } from 'react-icons/fa'
 import DashCard from '../components/dashcard/DashCard'
 import DashButton from '../components/dashbutton/DashButton'
+import DashItem from '../components/dashitem/DashItem'
 
 const listaTransacao = new ListaTransacao()
 
@@ -126,26 +126,7 @@ function Finances() {
               {
                 lista.map(transacao => 
                   transacao.tipo == "Receita" && (
-                    <div key={transacao.id} className={styles.registrosreceitasitem}>
-                      <p>{transacao.descricao}</p>
-                      <p className={styles.registrosreceitasitemvalue}>R$ {transacao.valor}</p>
-                    
-                      <div className={styles.actions}>
-                        <button
-                          className={styles.actionsbutton}
-                          onClick={() => exclude(transacao.id)}
-                        >
-                          <FaTrash />
-                        </button>
-
-                        <button
-                          className={styles.actionsbutton}
-                          onClick={() => edit(transacao.id)}
-                        >
-                          <FaPen />
-                        </button>
-                      </div>
-                    </div>
+                    <DashItem transacao={transacao} exclude={exclude} edit={edit} cor={"#9fe0b1"} />
                   ))
               }
             </div>
@@ -157,26 +138,7 @@ function Finances() {
             {
                 lista.map(transacao => 
                   transacao.tipo == "Despesa" && (
-                    <div key={transacao.id} className={styles.registrosdespesasitem}>
-                      <p>{transacao.descricao}</p>
-                      <p className={styles.registrosdespesasitemvalue}>R$ {transacao.valor}</p>
-                    
-                      <div className={styles.actions}>
-                        <button
-                          className={styles.actionsbutton}
-                          onClick={() => exclude(transacao.id)}
-                        >
-                          <FaTrash />
-                        </button>
-
-                        <button
-                          className={styles.actionsbutton}
-                          onClick={() => edit(transacao.id)}
-                        >
-                          <FaPen />
-                        </button>
-                      </div>
-                    </div>
+                    <DashItem transacao={transacao} exclude={exclude} edit={edit} cor={"#e09f9f"} />
                   ))
               }
             </div>
