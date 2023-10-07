@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Repositório de Aulas de React JS
 
-## Getting Started
+Bem-vindo ao repositório de aulas de React JS para o curso técnico em Desenvolvimento de Sistemas no SENAI - Valinhos! Neste repositório, você encontrará todos os recursos e códigos relacionados às nossas aulas de React JS.
 
-First, run the development server:
+## Sobre o Curso
+
+Este curso é projetado para fornecer aos alunos uma introdução sólida ao desenvolvimento de aplicações web usando React JS e JavaScript. Vamos abranger tópicos como componentes, state, props, roteamento, e muito mais. Os códigos e recursos aqui disponibilizados ajudarão você a praticar e aprofundar seus conhecimentos em React JS.
+
+## Estrutura do Repositório
+
+O repositório está organizado da seguinte forma:
+
+- `aulas/`: Este diretório contém os códigos e recursos específicos para cada aula. Cada aula terá seu próprio subdiretório com os materiais relacionados.
+
+- `projetos/`: Aqui você encontrará projetos práticos que você poderá implementar como exercícios ou projetos finais.
+
+- `recursos/`: Este diretório contém recursos adicionais, como slides de aula, guias e referências.
+
+## Como Usar Este Repositório
+
+1. Clone este repositório em sua máquina local:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/seu-usuario/seu-repositorio-react-js.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Navegue até o diretório da aula ou projeto que você deseja estudar.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+3. Dentro do diretório escolhido, siga as instruções fornecidas no arquivo README específico da aula ou projeto para configurar e executar o código.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Contribuições
 
-## Learn More
+Se você é aluno do curso e tem sugestões para melhorar este repositório, fique à vontade para enviar pull requests com melhorias, correções ou novos materiais. Valorizamos sua contribuição e estamos abertos a colaborações que possam beneficiar a comunidade de aprendizado.
 
-To learn more about Next.js, take a look at the following resources:
+## Contato
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Se você tiver alguma dúvida ou precisar de assistência, entre em contato conosco pelos seguintes meios:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Email: seu.email@exemplo.com
+- Discord: [Link para o servidor do Discord]
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Esperamos que este repositório seja útil em sua jornada de aprendizado em React JS. Feliz codificação!```

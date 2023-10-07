@@ -1,0 +1,19 @@
+.card {
+  width: 30%; /* Largura ligeiramente menor para espaço entre os cards */
+  height: 150px;
+  margin: 0.5rem; /* Espaçamento menor entre os cards */
+  border-radius: 5px;
+  padding: 1rem; /* Espaçamento maior dentro dos cards */
+  color: #333; /* Cor do texto mais escura */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionei uma sombra sutil */
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem; /* Espaçamento menor abaixo do título */
+}
+
+.cardValue {
+  font-size: 2rem;
+  font-weight: bold;
+}
