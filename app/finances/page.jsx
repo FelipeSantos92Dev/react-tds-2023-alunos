@@ -7,6 +7,7 @@ import ListaTransacao from '@/models/ListaTransacao'
 import DashCard from '../components/dashcard/DashCard'
 import DashButton from '../components/dashbutton/DashButton'
 import DashItem from '../components/dashitem/DashItem'
+import DashList from '../components/dashlist/DashList'
 
 const listaTransacao = new ListaTransacao()
 
@@ -120,17 +121,7 @@ function Finances() {
         </div>
 
         <div className={styles.registros}>
-          <div className={styles.registrosreceitas}>
-            <p className={styles.registrosreceitastitle}>Receitas Registradas</p>
-            <div className={styles.registrosreceitaslist}>
-              {
-                lista.map(transacao => 
-                  transacao.tipo == "Receita" && (
-                    <DashItem transacao={transacao} exclude={exclude} edit={edit} cor={"#9fe0b1"} />
-                  ))
-              }
-            </div>
-          </div>
+          <DashList lista={lista} exclude={exclude} edit={edit} tipo={"Receita"} color={"#d0f0c0"} />
 
           <div className={styles.registrosdespesas}>
             <p className={styles.registrosdespesastitle}>Despesas Registradas</p>

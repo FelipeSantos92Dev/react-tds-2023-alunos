@@ -1,0 +1,10 @@
+.registros {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto; /* Adicionei scroll para o conteúdo */
+  border-radius: 5px;
+  padding-bottom: 1rem;
+}
