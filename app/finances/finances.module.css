@@ -46,14 +46,6 @@
   gap: 1rem;
 }
 
-.inputdescription {
-  width: 100%;
-  height: 2.5rem;
-  border: 1px solid #d4d9de; /* Cor da borda mais clara */
-  border-radius: 5px;
-  padding: 0.5rem; /* Espaçamento menor dentro do input */
-}
-
 /* Informações do Dashboard */
 .infos {
   display: flex;

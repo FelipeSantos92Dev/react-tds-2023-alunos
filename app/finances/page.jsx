@@ -8,6 +8,7 @@ import DashCard from "../components/dashcard/DashCard";
 import DashButton from "../components/dashbutton/DashButton";
 import DashList from "../components/dashlist/DashList";
 import DashHeader from "../components/dashheader/DashHeader";
+import DashInput from "../components/dashinput/DashInput";
 
 const listaTransacao = new ListaTransacao();
 
@@ -85,21 +86,20 @@ function Finances() {
           <p className={styles.title}>Dashboard</p>
           <div className={styles.transaction}>
             <div className={styles.description}>
-              <input
-                className={styles.inputdescription}
-                value={description}
-                type="text"
-                name="description"
-                placeholder="Descrição"
-                onChange={(e) => setDescription(e.target.value)}
+              <DashInput
+                state={description}
+                setState={setDescription}
+                tipo={"text"}
+                nome={"description"}
+                texto={"Descrição"}
               />
-              <input
-                className={styles.inputdescription}
-                value={value}
-                type="number"
-                name="description"
-                placeholder="Valor (R$)"
-                onChange={(e) => setValue(e.target.value)}
+
+              <DashInput
+                state={value}
+                setState={setValue}
+                tipo={"number"}
+                nome={"value"}
+                texto={"Valor (R$)"}
               />
             </div>
             <div className={styles.type}>
