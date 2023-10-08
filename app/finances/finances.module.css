@@ -67,25 +67,6 @@
 
 /* Estilos para dispositivos móveis */
 @media (max-width: 768px) {
-  /* Container */
-  .container {
-    flex-direction: column;
-    padding: 1rem; /* Reduzido o espaçamento vertical */
-    text-align: center;
-  }
-
-  /* Perfil */
-  .profile {
-    align-items: center;
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-
-  .welcome,
-  .useremail {
-    text-align: center;
-  }
-
   /* Conteúdo Principal */
   .content {
     padding: 1rem; /* Reduzido o espaçamento interno */
@@ -115,38 +96,10 @@
     gap: 0.5rem;
   }
 
-  .inputdescription {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-
-  .buttonreceita,
-  .buttondespesa {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-
-  /* Cards do Dashboard */
-  .cardSaldo,
-  .cardReceitas,
-  .cardDespesas {
-    width: 100%; /* Largura total para dispositivos móveis */
-  }
-
   /* Registros */
   .registros {
     flex-direction: column; /* Alterado para empilhar registros na vertical */
     width: 100%; /* Largura total para dispositivos móveis */
-  }
-
-  /* Registros de Receitas */
-  .registrosreceitas {
-    background-color: #d0f0c0; /* Cor de fundo ajustada */
-  }
-
-  /* Registros de Despesas */
-  .registrosdespesas {
-    background-color: #f0c0c0; /* Cor de fundo ajustada */
   }
 
   /* Ajustes comuns para Registros de Receitas e Despesas */
@@ -161,13 +114,6 @@
   .registrosdespesaslist {
     width: 100%;
     padding: 0 1rem;
-  }
-
-  .registrosreceitasitem,
-  .registrosdespesasitem {
-    flex-direction: column; /* Empilhar itens na vertical */
-    width: 100%;
-    padding: 1rem; /* Aumentado o espaçamento interno */
   }
 
   .registrosreceitasitemvalue,

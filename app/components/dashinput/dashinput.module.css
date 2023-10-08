@@ -5,3 +5,10 @@
   border-radius: 5px;
   padding: 0.5rem; /* Espaçamento menor dentro do input */
 }
+
+@media (max-width: 768px) {
+  .inp {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}

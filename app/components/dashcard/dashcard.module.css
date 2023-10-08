@@ -17,3 +17,9 @@
   font-size: 2rem;
   font-weight: bold;
 }
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}

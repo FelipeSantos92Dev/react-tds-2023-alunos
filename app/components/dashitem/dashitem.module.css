@@ -36,3 +36,11 @@
 .actionsbutton:hover {
   background-color: #c9c9c9; /* Cor de fundo mais clara */
 }
+
+@media (max-width: 768px) {
+  .registrositem {
+    flex-direction: column; /* Empilhar itens na vertical */
+    width: 100%;
+    padding: 1rem; /* Aumentado o espaçamento interno */
+  }
+}

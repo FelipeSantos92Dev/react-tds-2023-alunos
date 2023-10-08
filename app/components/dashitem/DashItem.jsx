@@ -1,13 +1,12 @@
-import styles from './dashitem.module.css'
-import { FaPen, FaTrash } from 'react-icons/fa'
-
+import styles from "./dashitem.module.css";
+import { FaPen, FaTrash } from "react-icons/fa";
 
 const DashItem = ({ transacao, exclude, edit, cor }) => {
   return (
-    <div key={transacao.id} className={styles.registrositem} style={{ backgroundColor: cor }}>
+    <div className={styles.registrositem} style={{ backgroundColor: cor }}>
       <p>{transacao.descricao}</p>
       <p className={styles.registrositemvalue}>R$ {transacao.valor}</p>
-    
+
       <div className={styles.actions}>
         <button
           className={styles.actionsbutton}
@@ -24,7 +23,7 @@ const DashItem = ({ transacao, exclude, edit, cor }) => {
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default DashItem
+export default DashItem;

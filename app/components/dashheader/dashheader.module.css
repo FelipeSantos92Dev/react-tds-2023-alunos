@@ -27,3 +27,24 @@
   color: #888; /* Cor do e-mail mais clara para menor destaque */
   font-size: 0.75rem;
 }
+
+@media (max-width: 768px) {
+  /* Container */
+  .container {
+    flex-direction: column;
+    padding: 1rem; /* Reduzido o espaçamento vertical */
+    text-align: center;
+  }
+
+  /* Perfil */
+  .profile {
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .welcome,
+  .useremail {
+    text-align: center;
+  }
+}
