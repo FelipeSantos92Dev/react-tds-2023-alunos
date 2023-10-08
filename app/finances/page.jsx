@@ -6,8 +6,8 @@ import ListaTransacao from "@/models/ListaTransacao";
 
 import DashCard from "../components/dashcard/DashCard";
 import DashButton from "../components/dashbutton/DashButton";
-import DashItem from "../components/dashitem/DashItem";
 import DashList from "../components/dashlist/DashList";
+import DashHeader from "../components/dashheader/DashHeader";
 
 const listaTransacao = new ListaTransacao();
 
@@ -78,12 +78,7 @@ function Finances() {
 
   return (
     <>
-      <div className={styles.container}>
-        <div className={styles.profile}>
-          <p className={styles.welcome}>Olá, Felipe</p>
-          <p className={styles.useremail}>dev.felipesantos@gmail</p>
-        </div>
-      </div>
+      <DashHeader nome={"Felipe"} email={"felipesantos@docente.senai.br"} />
 
       <div className={styles.content}>
         <div className={styles.mainheader}>
@@ -127,6 +122,7 @@ function Finances() {
             </div>
           </div>
         </div>
+
         <div className={styles.infos}>
           <DashCard titulo={"Saldo"} valor={saldo} cor={"#9fc7e0"} />
           <DashCard titulo={"Receitas"} valor={receitas} cor={"#9fe0b1"} />
