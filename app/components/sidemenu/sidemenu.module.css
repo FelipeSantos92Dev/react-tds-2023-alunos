@@ -1,0 +1,44 @@
+.sideMenu {
+  width: 200px;
+  height: 100%;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  left: -120px;
+  transition: left 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.sideMenu.open {
+  left: 0;
+}
+
+.icon {
+  cursor: pointer;
+  padding: 10px;
+  padding-right: 20px;
+  color: white;
+}
+
+.menuItems {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.menuItems li {
+  padding: 10px;
+  padding-right: 20px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.menuItems li:hover {
+  background-color: #555;
+}
