@@ -29,6 +29,7 @@ function App() {
           }
         }
 
+        // O Promise.all espera que todas as promises sejam resolvidas para continuar.
         await Promise.all(data.map(fetchPokemonDetails));
 
         setPokemons(pokemonDetails);
@@ -53,7 +54,7 @@ function App() {
             <li key={index} className={styles.PokemonItem}>
               <h2 className={styles.PokemonName}>{pokemon.name}</h2>
               <img src={pokemon.sprite} alt={pokemon.name} className={styles.PokemonImage} />
-              <p className={styles.PokemonTypes}>Types: {pokemon.types.join(', ')}</p>
+              <p className={styles.PokemonTypes}>Tipos: {pokemon.types.join(', ')}</p>
             </li>
           ))}
         </ul>
