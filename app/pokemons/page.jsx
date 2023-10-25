@@ -2,9 +2,12 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import styles from './pokemons.module.css';
+import ListaPokemon from '@/models/ListaPokemon';
+
+const pokedex = new ListaPokemon();
 
 function App() {
-  const [pokemons, setPokemons] = useState([]);
+  const [allPokemons, setAllPokemons] = useState(pokedex.getAll());
   const [isLoading, setIsLoading] = useState(true);
   const [quantity, setQuantity] = useState(32);
 
@@ -33,7 +36,8 @@ function App() {
         // O Promise.all espera que todas as promises sejam resolvidas para continuar.
         await Promise.all(data.map(fetchPokemonDetails));
 
-        setPokemons(pokemonDetails);
+        pokedex.fill(pokemonDetails);
+        setAllPokemons(pokedex.getAll());
         setIsLoading(false);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -43,6 +47,8 @@ function App() {
 
     fetchPokemons();
   }, [quantity]);
+
+  console.log('allPokemons', allPokemons);
 
   return (
     <div className={styles.App}>
@@ -65,7 +71,7 @@ function App() {
         <p>Loading...</p>
       ) : (
         <ul className={styles.PokemonList}>
-          {pokemons.map((pokemon, index) => (
+          {allPokemons.map((pokemon, index) => (
             <li key={index} className={styles.PokemonItem}>
               <h2 className={styles.PokemonName}>{pokemon.name}</h2>
               <img src={pokemon.sprite} alt={pokemon.name} className={styles.PokemonImage} />

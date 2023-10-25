@@ -4,7 +4,7 @@ import styles from './sidemenu.module.css';
 import { FaBars } from 'react-icons/fa';
 
 const SideMenu = () => {
-  const [isMenuOpen, setMenuOpen] = useState(true);
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
