@@ -6,11 +6,12 @@ import styles from './pokemons.module.css';
 function App() {
   const [pokemons, setPokemons] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [quantity, setQuantity] = useState(32);
 
   useEffect(() => {
     async function fetchPokemons() {
       try {
-        const response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=20');
+        const response = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=${quantity}`);
         const data = response.data.results;
 
         const pokemonDetails = [];
@@ -41,11 +42,25 @@ function App() {
     }
 
     fetchPokemons();
-  }, []);
+  }, [quantity]);
 
   return (
     <div className={styles.App}>
       <h1>Pokédex</h1>
+
+      <div className={styles.Quantity}>
+        <label htmlFor="quantity">Quantidade de Pokémons:</label>
+        <input
+          type="number"
+          id="quantity"
+          name="quantity"
+          min="1"
+          max="1000"
+          value={quantity}
+          onChange={(event) => setQuantity(event.target.value)}
+        />
+      </div>
+
       {isLoading ? (
         <p>Loading...</p>
       ) : (

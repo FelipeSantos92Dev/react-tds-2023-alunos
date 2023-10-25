@@ -33,3 +33,16 @@
 .PokemonTypes {
   margin-top: 10px;
 }
+
+.Quantity {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px;
+  width: 200px;
+  margin: auto;
+  text-align: center;
+}
