@@ -1,0 +1,35 @@
+/* App.module.css */
+.App {
+  text-align: center;
+}
+
+.PokemonList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.PokemonItem {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.PokemonName {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.PokemonImage {
+  max-width: 100%;
+}
+
+.PokemonTypes {
+  margin-top: 10px;
+}
