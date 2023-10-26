@@ -7,9 +7,15 @@ import ListaPokemon from '@/models/ListaPokemon';
 const pokedex = new ListaPokemon();
 
 function App() {
-  const [allPokemons, setAllPokemons] = useState(pokedex.getAll());
+  const [allPokemons, setAllPokemons] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [quantity, setQuantity] = useState(32);
+
+  const [register, setRegister] = useState(false);
+  const [id, setId] = useState(0);
+  const [name, setName] = useState('');
+  const [sprite, setSprite] = useState('');
+  const [types, setTypes] = useState([]);
 
   useEffect(() => {
     async function fetchPokemons() {
@@ -37,7 +43,7 @@ function App() {
         await Promise.all(data.map(fetchPokemonDetails));
 
         pokedex.fill(pokemonDetails);
-        setAllPokemons(pokedex.getAll());
+        setAllPokemons(pokedex.getAll(quantity));
         setIsLoading(false);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -48,7 +54,20 @@ function App() {
     fetchPokemons();
   }, [quantity]);
 
-  console.log('allPokemons', allPokemons);
+  const registerPokemon = () => {
+    const pokemon = {
+      name,
+      sprite,
+      types: types.split(','),
+    };
+
+    pokedex.add(pokemon);
+    setAllPokemons(pokedex.getAll(quantity));
+    setName('');
+    setSprite('');
+    setTypes('');
+    setRegister(false);
+  }
 
   return (
     <div className={styles.App}>
@@ -65,19 +84,37 @@ function App() {
           value={quantity}
           onChange={(event) => setQuantity(event.target.value)}
         />
+
+        <button type="button" onClick={() => setRegister(!register)}>Cadastrar</button>
       </div>
 
       {isLoading ? (
         <p>Loading...</p>
       ) : (
         <ul className={styles.PokemonList}>
-          {allPokemons.map((pokemon, index) => (
+        { register ? (
+          <div>
+            <h2>Cadastro</h2>
+              <label htmlFor="name">Nome:</label>
+              <input type="text" id="name" name="name" value={name} onChange={e => setName(e.target.value)}/>
+              <label htmlFor="sprite">Sprite:</label>
+              <input type="text" id="sprite" name="sprite" value={sprite} onChange={e => setSprite(e.target.value)}/>
+              <label htmlFor="types">Tipos:</label>
+              <input type="text" id="types" name="types" value={types} onChange={e => setTypes(e.target.value)}/>
+              <button type="button" onClick={registerPokemon}>Cadastrar</button>
+          </div>
+        ) : (
+          allPokemons.map((pokemon, index) => (
             <li key={index} className={styles.PokemonItem}>
-              <h2 className={styles.PokemonName}>{pokemon.name}</h2>
+              <h2 className={styles.PokemonName}><span>#{index}</span> - {pokemon.name}</h2>
               <img src={pokemon.sprite} alt={pokemon.name} className={styles.PokemonImage} />
               <p className={styles.PokemonTypes}>Tipos: {pokemon.types.join(', ')}</p>
             </li>
-          ))}
+          )
+        )
+        )
+      }
+          
         </ul>
       )}
     </div>

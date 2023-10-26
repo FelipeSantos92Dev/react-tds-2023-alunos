@@ -1,0 +1,7 @@
+.titulo {
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: #3a87fa;
+  font-size: 5rem;
+  color: #faed3a;
+  letter-spacing: 8px;
+}

@@ -4,6 +4,7 @@ export default class ListaPokemon {
   }
 
   add(pokemon) {
+    console.log(pokemon);
     this.lista.push(pokemon);
   }
 
@@ -20,7 +21,8 @@ export default class ListaPokemon {
     );
   }
 
-  getAll() {
-    return this.lista;
+  // Pega todos os pokemons até a quantidade especificada
+  getAll(limit) {
+    return this.lista.slice(0, limit);
   }
 }
