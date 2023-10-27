@@ -29,6 +29,7 @@ function App() {
           try {
             const response = await axios.get(pokemon.url);
             const pokemonData = {
+              id: response.data.id,
               name: response.data.name,
               sprite: response.data.sprites.front_default,
               types: response.data.types.map((type) => type.type.name),
@@ -41,6 +42,7 @@ function App() {
 
         // O Promise.all espera que todas as promises sejam resolvidas para continuar.
         await Promise.all(data.map(fetchPokemonDetails));
+        console.log(pokemonDetails);
 
         pokedex.fill(pokemonDetails);
         setAllPokemons(pokedex.getAll(quantity));

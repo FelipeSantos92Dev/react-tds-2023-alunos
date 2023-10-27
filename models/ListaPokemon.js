@@ -11,6 +11,8 @@ export default class ListaPokemon {
   fill(lista) {
     this.lista = this.lista.concat(lista);
     this.unique();
+    // Order array by id
+    return this.lista.sort((a, b) => a.id - b.id);
   }
 
   // Remove duplicates
