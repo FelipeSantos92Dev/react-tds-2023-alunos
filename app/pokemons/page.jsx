@@ -34,7 +34,7 @@ function App() {
               sprite: response.data.sprites.front_default,
               types: response.data.types.map((type) => type.type.name),
             };
-            pokemonDetails.push(pokemonData);
+            pokedex.add(pokemonData);
           } catch (error) {
             console.error('Error fetching Pokemon details:', error);
           }
