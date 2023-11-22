@@ -1,10 +1,10 @@
 import axios from "axios";
 
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
 
 export async function GET() {
   try {
-    const response = await axios.get("http://localhost:4000/students");
+    const response = await axios.get("http://localhost:5003/students");
 
     return NextResponse.json(response.data);
   } catch (error) {
@@ -12,13 +12,16 @@ export async function GET() {
     return new NextResponse("Erro interno do servidor!", { status: 500 });
   }
 }
+ 
+export async function POST(NextRequest) {
+  const request = await NextRequest.json();
 
-export async function POST(request) {
-  console.log(request.body);
+  const { name, age } = request;
+  console.log(name, age);
   try {
     const response = await axios.post(
-      "http://localhost:4000/students",
-      request.body
+      "http://localhost:5003/students",
+      request
     );
 
     return NextResponse.json(response.data);
