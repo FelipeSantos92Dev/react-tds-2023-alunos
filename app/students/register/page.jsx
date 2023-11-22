@@ -1,42 +1,91 @@
 "use client";
 import DashHeader from "@/app/components/dashheader/DashHeader";
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+
+import styles from "./register.module.css";
+import Link from "next/link";
 
 export default function Register() {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
+  const [students, setStudents] = useState([]);
 
-  async function handleSubmit(event) {
-    event.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-    const response = await axios.post("/api/students", {
-      name,
-      age,
-    });
+    try {
+      const response = await axios.post("/api/students", { name, age });
+      setStudents([...students, response.data]);
+      setName("");
+      setAge("");
+    } catch (error) {
+      console.error("Error submitting data:", error);
+    }
+  };
 
-    console.log(response);
-  }
+  useEffect(() => {
+    async function fetchStudents() {
+      try {
+        const response = await axios.get("/api/students");
+        setStudents(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+
+    fetchStudents();
+  }, []);
   return (
-    <div>
+    <div className={styles.container}>
       <DashHeader nome={"Felipe 92 Dev"} email={"dev.felipesantos@gmail.com"} />
-      <p>Cadastrar Estudante</p>
 
-      <div>
+      <div className={styles.actions}>
+        <Link href="/students">
+          <button className={`${styles.button} ${styles.primaryButton}`}>
+            Voltar para Alunos
+          </button>
+        </Link>
+      </div>
+
+      <div className={styles.studentsContainer}>
+        <h1 className={styles.mainText}>Cadastrar Aluno</h1>
+
         <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Nome"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Idade"
-            value={age}
-            onChange={(e) => setAge(e.target.value)}
-          />
-          <button type="submit">Cadastrar</button>
+          <div className={styles.formGroup}>
+            <label className={styles.label} htmlFor="name">
+              Nome:
+            </label>
+            <input
+              className={styles.input}
+              type="text"
+              id="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
+          </div>
+
+          <div className={styles.formGroup}>
+            <label className={styles.label} htmlFor="age">
+              Idade:
+            </label>
+            <input
+              className={styles.input}
+              type="number"
+              id="age"
+              value={age}
+              onChange={(e) => setAge(e.target.value)}
+              required
+            />
+          </div>
+
+          <button
+            type="submit"
+            className={`${styles.button} ${styles.submitButton}`}
+          >
+            Cadastrar
+          </button>
         </form>
       </div>
     </div>

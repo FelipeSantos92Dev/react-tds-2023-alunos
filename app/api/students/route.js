@@ -2,9 +2,11 @@ import axios from "axios";
 
 import { NextResponse } from "next/server";
 
+const url = process.env.BASE_URL;
+
 export async function GET() {
   try {
-    const response = await axios.get("http://localhost:4000/students");
+    const response = await axios.get(url);
 
     return NextResponse.json(response.data);
   } catch (error) {
@@ -17,7 +19,7 @@ export async function POST(request) {
   const params = await request.json();
 
   try {
-    const response = await axios.post("http://localhost:4000/students", params);
+    const response = await axios.post(url, params);
 
     return NextResponse.json(response.data);
   } catch (error) {

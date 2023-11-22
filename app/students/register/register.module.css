@@ -21,6 +21,11 @@
   color: #fff;
 }
 
+.submitButton {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
 .button:hover {
   filter: brightness(90%);
 }
@@ -37,40 +42,23 @@
   margin-bottom: 10px;
 }
 
-.studentList {
-  display: flex;
-  flex-direction: column;
+.formGroup {
+  margin-bottom: 15px;
 }
 
-.student {
+.label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 15px;
-  margin-bottom: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  box-sizing: border-box;
 }
 
-.studentInfo {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  flex-grow: 1;
-  margin-right: 15px;
-}
-
-.buttons {
-  display: flex;
-  gap: 10px;
-}
-
-.deleteButton {
-  background-color: #e74c3c;
-  color: #fff;
-}
-
-.editButton {
-  background-color: #2ecc71;
-  color: #fff;
-}
+/* Restante dos estilos mantidos da página de visualização de alunos */

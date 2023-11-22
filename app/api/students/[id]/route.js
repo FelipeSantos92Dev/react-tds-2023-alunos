@@ -2,11 +2,13 @@ import axios from "axios";
 
 import { NextResponse } from "next/server";
 
+const url = process.env.BASE_URL;
+
 export async function GET(request, { params }) {
   const { id } = params;
 
   try {
-    const response = await axios.get(`http://localhost:4000/students/${id}`);
+    const response = await axios.get(`${url}/${id}`);
 
     return NextResponse.json(response.data);
   } catch (error) {
@@ -20,10 +22,7 @@ export async function PUT(request, { params }) {
   const body = await request.json();
 
   try {
-    const response = await axios.put(
-      `http://localhost:4000/students/${id}`,
-      body
-    );
+    const response = await axios.put(`${url}/${id}`, body);
 
     return NextResponse.json(response.data);
   } catch (error) {
@@ -35,7 +34,7 @@ export async function PUT(request, { params }) {
 export async function DELETE(request, { params }) {
   const { id } = params;
   try {
-    const response = await axios.delete(`http://localhost:4000/students/${id}`);
+    const response = await axios.delete(`${url}/${id}`);
 
     return NextResponse.json(response.data);
   } catch (error) {
