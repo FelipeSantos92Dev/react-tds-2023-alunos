@@ -1,14 +1,12 @@
-import SideMenu from "./components/sidemenu/SideMenu";
-
-import styles from './page.module.css'
+import DashHeader from "./components/dashheader/DashHeader";
 
 export default function Home() {
   return (
     <div>
-      <SideMenu />
+      <DashHeader nome={"Felipe 92 Dev"} email={"dev.felipesantos@gmail.com"} />
       <div style={{ marginLeft: 100 }}>
-        <p className={styles.titulo} >Página principal</p>
+        <p>Página principal</p>
       </div>
     </div>
-  )
+  );
 }

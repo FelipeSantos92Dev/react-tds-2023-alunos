@@ -8,6 +8,24 @@
   border-bottom: 2px solid #d4d9de; /* Usei uma cor de borda mais clara */
 }
 
+.menuItems {
+  display: flex;
+  align-items: center;
+  gap: 4rem; /* Espaçamento entre os itens */
+  justify-content: center;
+  width: 70%; /* Largura automática para ajustar ao conteúdo */
+}
+
+/* Logo */
+.logo {
+  color: #333; /* Cor do texto mais escura para maior legibilidade */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 30%; /* Largura automática para ajustar ao conteúdo */
+}
+
 /* Perfil */
 .profile {
   color: #333; /* Cor do texto mais escura para maior legibilidade */
@@ -15,7 +33,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  width: 100%; /* Largura automática para ajustar ao conteúdo */
+  width: 30%; /* Largura automática para ajustar ao conteúdo */
 }
 
 .welcome {
