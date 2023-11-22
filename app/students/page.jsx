@@ -1,6 +1,7 @@
 "use client";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 import DashHeader from "../components/dashheader/DashHeader";
 import Link from "next/link";
@@ -8,6 +9,8 @@ import Link from "next/link";
 export default function Page() {
   const [students, setStudents] = useState([]);
   const [dados, setDados] = useState([]);
+
+  const router = useRouter();
 
   const deletar = async (id) => {
     const url = `/api/students/${id}`;
@@ -17,6 +20,10 @@ export default function Page() {
     } catch (error) {
       console.error("Error fetching data:");
     }
+  };
+
+  const update = async (id) => {
+    router.push(`/students/${id}`);
   };
 
   useEffect(() => {
@@ -52,6 +59,7 @@ export default function Page() {
                   <li>{student.name}</li>
                   <li>{student.age}</li>
                   <button onClick={() => deletar(student.id)}>Deletar</button>
+                  <button onClick={() => update(student.id)}>Atualizar</button>
                 </div>
               ))}
             </ul>
