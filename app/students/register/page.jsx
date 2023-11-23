@@ -15,8 +15,7 @@ export default function Register() {
     e.preventDefault();
 
     try {
-      const response = await axios.post("/api/students", { name, age });
-      setStudents([...students, response.data]);
+      await axios.post("/api/students", { name, age });
       setName("");
       setAge("");
     } catch (error) {
