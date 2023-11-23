@@ -1,0 +1,95 @@
+/* students.module.css */
+
+.actions {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.primaryButton {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.button:hover {
+  filter: brightness(90%);
+}
+
+.studentsContainer {
+  margin-top: 20px;
+  max-width: 80%;
+  margin: auto;
+}
+
+.mainText {
+  color: #3498db;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.studentList {
+  display: flex;
+  flex-direction: column;
+}
+
+.student {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.studentInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex-grow: 1;
+  margin-right: 15px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.deleteButton {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.editButton {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
