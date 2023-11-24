@@ -136,7 +136,7 @@ function App() {
               allPokemons.map((pokemon, index) => (
                 <li key={index} className={styles.PokemonItem}>
                   <h2 className={styles.PokemonName}>
-                    <span>#{index}</span> - {pokemon.name}
+                    <span>#{index + 1}</span> - {pokemon.name}
                   </h2>
                   <img
                     src={pokemon.sprite}

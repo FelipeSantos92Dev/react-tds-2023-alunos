@@ -4,7 +4,6 @@ export default class ListaPokemon {
   }
 
   add(pokemon) {
-    console.log(pokemon);
     this.lista.push(pokemon);
   }
 
