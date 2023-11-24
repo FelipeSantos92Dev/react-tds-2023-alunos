@@ -58,44 +58,40 @@ export default function Page() {
         <h1 className={styles.mainText}>Alunos</h1>
 
         {dados.length ? (
-          students ? (
-            <div className={styles.studentList}>
-              {dados.map((student) => (
-                <div key={student.id} className={styles.student}>
-                  <div className={styles.studentInfo}>
-                    <p>
-                      <strong>ID:</strong> {student.id}
-                    </p>
-                    <p>
-                      <strong>Nome:</strong> {student.name}
-                    </p>
-                    <p>
-                      <strong>Idade:</strong> {student.age}
-                    </p>
-                  </div>
-
-                  <div className={styles.buttons}>
-                    <button
-                      className={`${styles.button} ${styles.deleteButton}`}
-                      onClick={() => deletar(student.id)}
-                    >
-                      <FaTrash /> Deletar
-                    </button>
-                    <button
-                      className={`${styles.button} ${styles.editButton}`}
-                      onClick={() => update(student.id)}
-                    >
-                      <FaEdit /> Atualizar
-                    </button>
-                  </div>
+          <div className={styles.studentList}>
+            {students.map((student) => (
+              <div key={student.id} className={styles.student}>
+                <div className={styles.studentInfo}>
+                  <p>
+                    <strong>ID:</strong> {student.id}
+                  </p>
+                  <p>
+                    <strong>Nome:</strong> {student.name}
+                  </p>
+                  <p>
+                    <strong>Idade:</strong> {student.age}
+                  </p>
                 </div>
-              ))}
-            </div>
-          ) : (
-            <p>Carregando...</p>
-          )
+
+                <div className={styles.buttons}>
+                  <button
+                    className={`${styles.button} ${styles.deleteButton}`}
+                    onClick={() => deletar(student.id)}
+                  >
+                    <FaTrash /> Deletar
+                  </button>
+                  <button
+                    className={`${styles.button} ${styles.editButton}`}
+                    onClick={() => update(student.id)}
+                  >
+                    <FaEdit /> Atualizar
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
         ) : (
-          <p>Não há alunos cadastrados</p>
+          <p>{dados.message ? dados.message : "Carregando..."}</p>
         )}
       </div>
     </div>
