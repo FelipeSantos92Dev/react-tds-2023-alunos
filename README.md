@@ -1,42 +1,70 @@
-# Repositório de Aulas de React JS
+# Projeto NextJS com Requisições API
 
-Bem-vindo ao repositório de aulas de React JS para o curso técnico em Desenvolvimento de Sistemas no SENAI - Valinhos! Neste repositório, você encontrará todos os recursos e códigos relacionados às nossas aulas de React JS.
+[![Capa do Projeto](https://i.imgur.com/E8YvzaC.png)](https://github.com/FelipeSantos92Dev/react-tds-2023-alunos)
 
-## Sobre o Curso
+## Descrição
 
-Este curso é projetado para fornecer aos alunos uma introdução sólida ao desenvolvimento de aplicações web usando React JS e JavaScript. Vamos abranger tópicos como componentes, state, props, roteamento, e muito mais. Os códigos e recursos aqui disponibilizados ajudarão você a praticar e aprofundar seus conhecimentos em React JS.
+Este projeto é uma aplicação em NextJS com páginas dedicadas a diferentes funcionalidades: "pokemons", "finances" e "students". As requisições à API são feitas apenas nas páginas de "pokemons" e "students", demonstrando a integração eficiente de NextJS com APIs externas.
 
-## Estrutura do Repositório
+## Tecnologias
 
-O repositório está organizado da seguinte forma:
+- NextJS
+- React
+- JavaScript
+- Axios (para requisições API)
+- CSS (ou Styled Components para estilização)
+- Git
+- Github
 
-- `aulas/`: Este diretório contém os códigos e recursos específicos para cada aula. Cada aula terá seu próprio subdiretório com os materiais relacionados.
+## Objetivo
 
-- `projetos/`: Aqui você encontrará projetos práticos que você poderá implementar como exercícios ou projetos finais.
+O objetivo desta aplicação é fornecer um exemplo prático de como integrar o NextJS com APIs externas, demonstrando o uso de rotas dinâmicas e a eficácia do framework para o desenvolvimento de aplicações React.
 
-- `recursos/`: Este diretório contém recursos adicionais, como slides de aula, guias e referências.
+## Pré-requisitos
 
-## Como Usar Este Repositório
+Para executar este projeto, é necessário ter instalado:
 
-1. Clone este repositório em sua máquina local:
+- NodeJS
+- NPM ou Yarn
 
-```bash
-git clone https://github.com/seu-usuario/seu-repositorio-react-js.git
-```
+## Etapas de criação do projeto
 
-2. Navegue até o diretório da aula ou projeto que você deseja estudar.
+1. Clone o projeto para sua máquina.
+2. Navegue até o diretório do projeto e execute o comando `npm install` ou `yarn install` para instalar as dependências.
+3. Crie os arquivos de configuração do ambiente, como o `.env` para armazenar chaves de API ou outras configurações sensíveis.
+4. Execute o projeto com o comando `npm run dev` ou `yarn dev`.
+5. Acesse a aplicação no navegador em [http://localhost:3000](http://localhost:3000).
 
-3. Dentro do diretório escolhido, siga as instruções fornecidas no arquivo README específico da aula ou projeto para configurar e executar o código.
+## Estrutura do Projeto
 
-## Contribuições
+O projeto está organizado da seguinte maneira:
 
-Se você é aluno do curso e tem sugestões para melhorar este repositório, fique à vontade para enviar pull requests com melhorias, correções ou novos materiais. Valorizamos sua contribuição e estamos abertos a colaborações que possam beneficiar a comunidade de aprendizado.
+- `/pokemons.js`: Página dedicada à exibição de informações sobre pokémons, fazendo requisições à API correspondente.
+- `/finances.js`: Página dedicada à gestão financeira (adicionar, visualizar transações, etc.). Não possui requisições à API neste exemplo.
+- `/students.js`: Página dedicada a informações sobre estudantes, fazendo requisições à API correspondente.
+- `/components/`: Pasta contendo componentes reutilizáveis.
+- `/api/`: Pasta contendo arquivos de rotas para a API.
 
-## Contato
+## Instalação
 
-Se você tiver alguma dúvida ou precisar de assistência, entre em contato conosco pelos seguintes meios:
+1. Clone o repositório: `git clone https://github.com/FelipeSantos92Dev/react-tds-2023-alunos.git`
+2. Navegue até o diretório: `cd react-tds-2023-alunos`
+3. Instale as dependências: `npm install` ou `yarn install`
+4. Execute o projeto: `npm run dev` ou `yarn dev`
+5. Acesse a aplicação no navegador: [http://localhost:3000](http://localhost:3000)
 
-- Email: seu.email@exemplo.com
-- Discord: [Link para o servidor do Discord]
+## Autor
 
-Esperamos que este repositório seja útil em sua jornada de aprendizado em React JS. Feliz codificação!```
+[Felipe Santos](https://github.com/FelipeSantos92Dev)
+
+## Links Úteis
+
+- [NextJS](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [Axios](https://axios-http.com/)
+- [NodeJS](https://nodejs.org/en/)
+- [NPM](https://www.npmjs.com/)
+- [Yarn](https://yarnpkg.com/)
+- [Git](https://git-scm.com/)
+- [Github](https://github.com/FelipeSantos92Dev/node-tds-2023-alunos)
+- [Github](https://github.com/FelipeSantos92Dev/react-tds-2023-alunos)
