@@ -2,6 +2,7 @@
 import DashHeader from "@/app/components/dashheader/DashHeader";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 import styles from "./register.module.css";
 import Link from "next/link";
@@ -10,6 +11,7 @@ export default function Register() {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
   const [students, setStudents] = useState([]);
+  const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,6 +20,7 @@ export default function Register() {
       await axios.post("/api/students", { name, age });
       setName("");
       setAge("");
+      router.push(`/students/`);
     } catch (error) {
       console.error("Error submitting data:", error);
     }

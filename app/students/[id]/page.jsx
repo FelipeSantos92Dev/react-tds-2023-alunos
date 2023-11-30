@@ -36,7 +36,7 @@ export default function UpdateStudent({ params }) {
 
     try {
       await axios.put(`/api/students/${id}`, { name, age });
-      router.push(`/students/${id}`);
+      router.push(`/students/`);
     } catch (error) {
       console.error("Error updating student:", error);
     }
