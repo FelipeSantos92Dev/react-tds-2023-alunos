@@ -80,8 +80,10 @@ function App() {
       <div className={styles.App}>
         <h1>Pokédex</h1>
 
-        <div className={styles.Quantity}>
-          <label htmlFor="quantity">Quantidade de Pokémons:</label>
+        <div className={`${styles.Quantity} ${styles.QuantityContainer}`}>
+          <label htmlFor="quantity" className={styles.QuantityLabel}>
+            Quantidade de Pokémons:
+          </label>
           <input
             type="number"
             id="quantity"
@@ -90,9 +92,14 @@ function App() {
             max="1000"
             value={quantity}
             onChange={(event) => setQuantity(event.target.value)}
+            className={styles.QuantityInput}
           />
 
-          <button type="button" onClick={() => setRegister(!register)}>
+          <button
+            type="button"
+            onClick={() => setRegister(!register)}
+            className={styles.RegisterButton}
+          >
             Cadastrar
           </button>
         </div>
